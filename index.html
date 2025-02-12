@@ -5,13 +5,10 @@
             <br/>
             <br/>
             <br/>
-               <img id="valentineImage" src="will insert later but keep this one and get rid of other images" alt="Valentine's Day Image" style="max-width: 300px; height: auto;">
-            
-            <br/>
-            <br/>
             <br/>
             <br/>
             <h1>Will you be my valentine, Rafsan?</h1>
+            <img id="valentineImage" src="images/#val.png" alt="Valentine's Day Image" style="max-width: 300px; height: auto;">
             <br/>
             <br/>
             <br/>
@@ -21,17 +18,17 @@
 
         <style>
             body {
-                background: linear-gradient(to bottom, #FC6C85, #FBBBB9);
+                background: linear-gradient(to bottom, #ff6fbb, #ffb2db);
             }
             div {
                 text-align: center;
                 vertical-align: middle;
             }
             h1 {
-                color: #CA226B;
+                color: #ff477e;
             }
             #yesButton {
-                background-color: #52D017;
+                background-color: #d6ff93;
                 transition: transform 0.3s;
                 margin-right: 10px;
                 width: 120px;
@@ -42,7 +39,7 @@
             }
             #no {
                 position: absolute;
-                background-color: #E41B17;
+                background-color: #ff9393;
                 transition: transform 0.3s;
                 margin-left: 10px;
                 width: 120px;
@@ -55,6 +52,7 @@
 
             function showAlert() {
                 alert("I love you more baby! You're my Valentine everyday <3");
+                document.getElementById("valentineImage").src = "images/#yes.png"; // Add your Yes button image URL here
             }
 
             var yesButton = document.getElementById("yesButton");
@@ -62,13 +60,15 @@
             var valentineImage = document.getElementById("valentineImage");
 
             var noTexts = ["Rude baby :(", "Please give me a chance", "Please babeee", "Wow I did not expect this :(", "Wait, think about it please :(", "I'm gonna cry"];
-            
+            var noImage = "images/#noo.png"; // Add your No button image URL here
+
             no.addEventListener("click", change);
 
             function change() {
                 var randomIndex = Math.floor(Math.random() * noTexts.length);
                 var randomText = noTexts[randomIndex];
                 no.innerText = randomText;
+                valentineImage.src = noImage; // Change to No button image
 
                 var i = Math.floor(Math.random() * 1000) + 1;
                 var j = Math.floor(Math.random() * 700) + 1;
